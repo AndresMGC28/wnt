@@ -1,0 +1,13 @@
+@import './utilities/variables';
+
+@import './base/reset';
+@import './base/tipografia';
+
+@import './layout/footer';
+@import './layout/header';
+@import './layout/navegacion';
+
+
+@import './views/index.scss';
+
+// $ sass --watch  sass/main.scss css/styles.css
