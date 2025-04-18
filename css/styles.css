@@ -29,14 +29,14 @@ footer div {
   color: white;
 }
 footer div h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: auto;
   margin-left: 10px;
 }
 footer div img {
-  width: 40px;
+  width: 35px;
   padding: 5px;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -49,8 +49,8 @@ header img {
   padding: 2px;
 }
 header div h1 span {
-  font-size: 1.5rem;
-  padding: 25px;
+  font-size: 1.1rem;
+  padding: 20px;
 }
 header div li {
   font-size: 1rem;
@@ -81,10 +81,11 @@ body {
 }
 
 .ini {
-  background-image: url(../../img/10.jpg);
+  background-image: url(../img/10.jpg);
   background-size: cover;
-  width: 100%;
-  height: 350px;
+  background-position: center;
+  width: 95%;
+  height: 300px;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -93,45 +94,75 @@ body {
 }
 @media (min-width: 992px) {
   .ini {
-    height: 500px;
+    height: 520px;
   }
 }
 .ini div {
   width: 100%;
 }
+.ini div .bot {
+  text-align: center;
+}
 .ini div h2, .ini div a {
-  margin: auto 20px;
+  margin: auto 10px;
   color: black;
   font-family: "Times New Roman", Times, serif;
-  padding: 30px;
-  font-size: 2.5rem;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+@media (min-width: 992px) {
+  .ini div h2, .ini div a {
+    font-size: 4rem;
+  }
 }
 .ini div a {
   font-size: 1.5rem;
   align-content: center;
   text-decoration: none;
-  margin-left: 50px;
   border-radius: 60px;
   line-height: 2;
-  padding: 5px;
-  border: 2px solid black;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .ini div a {
+    font-size: 2.5rem;
+  }
 }
 .ini div a:hover {
-  background-color: rgb(245, 245, 245);
-  transition-duration: 1.5s;
-  color: rgb(78, 78, 78);
-  padding: 5px 15px;
+  transition-duration: 2s;
+  color: black;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  margin-bottom: 100px;
+  text-decoration: underline;
+}
+@media (min-width: 992px) {
+  .ini div a:hover {
+    font-size: 2.8rem;
+    padding: 5px 30px;
+  }
 }
 
 .des {
   color: white;
   width: 100%;
   text-align: center;
-  padding: 25px;
+}
+.des h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .red {
   width: 90%;
+  align-items: center;
+  padding: 10px 10px;
+}
+@media (min-width: 992px) {
+  .red {
+    display: flex;
+    width: 90%;
+  }
 }
 
 .med {
@@ -139,33 +170,33 @@ body {
   width: 100%;
   color: white;
   border-radius: 10px;
-  margin: 20px 5%;
+  margin: auto 20px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 .med h3 {
-  font-size: 2rem;
-  padding: 10px;
+  font-size: 1rem;
+  margin-left: 10px;
 }
 .med p, .med a {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 10px;
   text-decoration: none;
   color: white;
+  margin-bottom: 25px;
 }
 .med a {
   text-align: center;
-  margin: auto;
 }
 .med img {
-  width: 20%;
+  width: 35%;
   color: bisque;
   padding: 10px;
 }
 .med .url {
   text-align: center;
-  text-align: center;
   width: 100px;
   margin: auto;
-  padding: 5px;
 }
 .med .url:hover {
   text-align: center;
@@ -177,17 +208,25 @@ body {
 }
 
 form {
-  width: 90%;
+  background-color: rgb(3, 3, 3);
+  border: 2px solid white;
+  width: 80%;
+  height: 345px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  border: 2px solid rgb(255, 255, 255);
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+form:hover {
+  background-color: rgb(10, 10, 10);
 }
 
 input, textarea {
   background-color: rgb(177, 177, 177);
+  font-size: 1rem;
   border-radius: 10px;
   padding: 5px;
   margin: 10px;
