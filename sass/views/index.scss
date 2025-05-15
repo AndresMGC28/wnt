@@ -3,10 +3,34 @@
         @content        
     } 
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes circle-in-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+@keyframes shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:0 0 20px 0 rgba(255,255,255,.55)}}
+
+
+
+
+
 body{
+    animation: fadeIn 1.5s ease-in;
+
     width: 100%;
     background-color: black;
+    background-image: linear-gradient(225deg, #00282e 0, #032326 10%, #061d1e 20%, #051716 30%, #030e0d 40%, #000000 50%, #000000 60%, #000000 70%, #000000 80%, #000000 90%, #000000 100%);
         width: 100%;
+        
 }
 
 .ini{
@@ -20,6 +44,7 @@ body{
     align-items: center;
     margin: 10px auto;
     border-radius: 10px;
+  animation: 4.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
     @include navegador{
         height: 520px;
     }
@@ -29,7 +54,7 @@ body{
             text-align: center;
         }
         h2,a{
-            
+            text-align: center;
             margin: auto 10px;
             color: black;
             font-family: 'Times New Roman', Times, serif;
@@ -53,18 +78,6 @@ body{
             }
             
         }
-        a:hover{
-            transition-duration: 2s;
-            color: black;
-            font-size: 1.5rem;
-            padding: 5px 10px;
-            margin-bottom: 100px;
-            text-decoration: underline;
-            @include navegador{
-                font-size: 2.8rem;
-                padding: 5px 30px;
-            }
-        }
      
     } 
 }
@@ -75,15 +88,26 @@ body{
     h2{
         font-size: 1.2rem;
         margin-bottom: 10px;
+        @include navegador{
+            font-size: 2rem;
+        }
     }
+
+}
+a{
+    text-decoration: none;
 }
 .red{
     width: 90%;
     align-items: center;
     padding: 10px 10px;
+    margin: auto;
+    
     @include navegador{
+        margin: auto;
         display: flex;
-        width: 90%;
+        width: 95%;
+        border-radius: 20px;
     }   
 }
 .med{ 
@@ -91,10 +115,15 @@ body{
     width: 100%;
     color: white;
     border-radius: 10px;
-    margin: auto 20px ;
+    margin: auto;
+    margin: auto;
     margin-bottom: 20px;
     padding: 20px;
-    
+    @include navegador{
+        width: 90%;
+        height: 350px;
+        border-radius: 20px;
+    } 
     
     h3{
         font-size: 1rem;
@@ -127,8 +156,55 @@ body{
 }
 .med:hover{
     background-color: rgb(40, 40, 40);
+        animation: fadeIn .5s ease-in;
+        animation:shadow-drop-center 0.1s linear both 
+        
+    
 
 }
+
+
+
+
+.des{
+    margin-top: 30px;
+}
+.des1{
+    background-color: black;
+    border-radius: 50px;
+    width: 95%;
+    border-radius: 2%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin: auto;
+}
+.formulario{
+    width: 100%;
+    height: 550px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    div{
+        width: 100%;
+        
+    }
+    .forimg{
+            width: 0%;
+            @include navegador{
+            width: 100%;
+    }
+        }
+    video{
+        margin: auto;
+        width: 100%;
+        height: 95%;
+        border-radius: 20px;
+        
+ 
+    }
+}
+
+
 form{
     background-color: rgb(3, 3, 3);
     border: 2px solid white;
@@ -140,6 +216,12 @@ form{
     padding: 10px;
     border-radius: 20px; 
     margin-bottom: 15px;
+     @include navegador{
+        margin: auto;
+        margin-left: 80px;
+        width: 95%;
+        height: 95%;
+    }   
 }
 form:hover{
     background-color: rgb(10, 10, 10);
@@ -152,6 +234,13 @@ input, textarea{
     border-radius: 10px;
     padding: 5px;
     margin:  10px;    
+}
+textarea{
+    @include navegador{
+        width: 95%;
+        height: 95%;
+        margin: auto;
+    }  
 }
 input:hover, textarea:hover{
     background-color:rgb(211, 211, 211);
