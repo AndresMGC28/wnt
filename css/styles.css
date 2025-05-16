@@ -29,7 +29,7 @@ footer div {
   color: white;
 }
 footer div h2 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: auto;
   margin-left: 10px;
 }
@@ -41,19 +41,50 @@ footer div img {
   margin-top: 10px;
 }
 
+.whatsapp {
+  width: 35px;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  bottom: 50px;
+  position: fixed;
+  transition: all 1s;
+}
+@media (min-width: 992px) {
+  .whatsapp {
+    width: 60px;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: auto;
+    bottom: 50px;
+    position: fixed;
+  }
+}
+
+.whatsapp:hover {
+  transform: rotatey(360deg);
+}
+
 header {
-  width: 100;
+  width: 100%;
+}
+header div {
+  width: 100%;
 }
 header img {
   width: 50px;
   padding: 2px;
 }
 header div h1 span {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   padding: 20px;
 }
 header div li {
-  font-size: 1rem;
+  font-size: 1.2rem;
+}
+header div li:hover {
+  text-decoration: underline;
 }
 header div span {
   color: rgb(0, 0, 0);
@@ -64,19 +95,36 @@ header div span {
     justify-content: end;
   }
 }
-header div li:hover {
-  color: red;
-  padding: 2px 5px;
-}
-header div li:hover span {
-  font-weight: 500;
-  text-decoration: underline;
-  transition-duration: 1s;
-}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes circle-in-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.55);
+  }
+}
 body {
+  animation: fadeIn 1.5s ease-in;
   width: 100%;
   background-color: black;
+  background-image: linear-gradient(225deg, #00282e 0, #032326 10%, #061d1e 20%, #051716 30%, #030e0d 40%, #000000 50%, #000000 60%, #000000 70%, #000000 80%, #000000 90%, #000000 100%);
   width: 100%;
 }
 
@@ -91,6 +139,7 @@ body {
   align-items: center;
   margin: 10px auto;
   border-radius: 10px;
+  animation: 4.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
 }
 @media (min-width: 992px) {
   .ini {
@@ -104,6 +153,7 @@ body {
   text-align: center;
 }
 .ini div h2, .ini div a {
+  text-align: center;
   margin: auto 10px;
   color: black;
   font-family: "Times New Roman", Times, serif;
@@ -128,20 +178,6 @@ body {
     font-size: 2.5rem;
   }
 }
-.ini div a:hover {
-  transition-duration: 2s;
-  color: black;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  margin-bottom: 100px;
-  text-decoration: underline;
-}
-@media (min-width: 992px) {
-  .ini div a:hover {
-    font-size: 2.8rem;
-    padding: 5px 30px;
-  }
-}
 
 .des {
   color: white;
@@ -152,16 +188,28 @@ body {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
+@media (min-width: 992px) {
+  .des h2 {
+    font-size: 2rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
 
 .red {
   width: 90%;
   align-items: center;
   padding: 10px 10px;
+  margin: auto;
 }
 @media (min-width: 992px) {
   .red {
+    margin: auto;
     display: flex;
-    width: 90%;
+    width: 95%;
+    border-radius: 20px;
   }
 }
 
@@ -170,9 +218,17 @@ body {
   width: 100%;
   color: white;
   border-radius: 10px;
-  margin: auto 20px;
+  margin: auto;
+  margin: auto;
   margin-bottom: 20px;
   padding: 20px;
+}
+@media (min-width: 992px) {
+  .med {
+    width: 90%;
+    height: 350px;
+    border-radius: 20px;
+  }
 }
 .med h3 {
   font-size: 1rem;
@@ -205,6 +261,47 @@ body {
 
 .med:hover {
   background-color: rgb(40, 40, 40);
+  animation: fadeIn 0.5s ease-in;
+  animation: shadow-drop-center 0.1s linear both;
+}
+
+.des {
+  margin-top: 30px;
+}
+
+.des1 {
+  background-color: black;
+  border-radius: 50px;
+  width: 95%;
+  border-radius: 2%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin: auto;
+}
+
+.formulario {
+  width: 100%;
+  height: 550px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+}
+.formulario div {
+  width: 100%;
+}
+.formulario .forimg {
+  width: 0%;
+}
+@media (min-width: 992px) {
+  .formulario .forimg {
+    width: 100%;
+  }
+}
+.formulario video {
+  margin: auto;
+  width: 100%;
+  height: 95%;
+  border-radius: 20px;
 }
 
 form {
@@ -219,6 +316,14 @@ form {
   border-radius: 20px;
   margin-bottom: 15px;
 }
+@media (min-width: 992px) {
+  form {
+    margin: auto;
+    margin-left: 80px;
+    width: 95%;
+    height: 95%;
+  }
+}
 
 form:hover {
   background-color: rgb(10, 10, 10);
@@ -230,6 +335,14 @@ input, textarea {
   border-radius: 10px;
   padding: 5px;
   margin: 10px;
+}
+
+@media (min-width: 992px) {
+  textarea {
+    width: 95%;
+    height: 95%;
+    margin: auto;
+  }
 }
 
 input:hover, textarea:hover {
