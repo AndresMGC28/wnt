@@ -24,12 +24,12 @@
 
 
 body{
-    animation: fadeIn 1.5s ease-in;
-
+    animation: fadeIn 2s;
     width: 100%;
     background-color: black;
     background-image: linear-gradient(225deg, #00282e 0, #032326 10%, #061d1e 20%, #051716 30%, #030e0d 40%, #000000 50%, #000000 60%, #000000 70%, #000000 80%, #000000 90%, #000000 100%);
-        width: 100%;
+    width: 100%;
+
         
 }
 
@@ -44,7 +44,7 @@ body{
     align-items: center;
     margin: 10px auto;
     border-radius: 10px;
-  animation: 4.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+    animation: 8s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
     @include navegador{
         height: 520px;
     }
@@ -156,8 +156,12 @@ a{
 }
 .med:hover{
     background-color: rgb(40, 40, 40);
-        animation: fadeIn .5s ease-in;
-        animation:shadow-drop-center 0.1s linear both 
+    animation: fadeIn .5s ease-in;
+    animation:shadow-drop-center 0.1s linear both;
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(100, 255, 218, 0.3); 
+    transition: transform .8s;
+
         
     
 
@@ -239,6 +243,7 @@ input, textarea{
     margin:  10px;    
 }
 textarea{
+    height: 100%;
     @include navegador{
         width: 95%;
         height: 95%;
