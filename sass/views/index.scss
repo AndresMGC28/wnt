@@ -17,7 +17,7 @@
   }
 }
 
-@keyframes shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:0 0 20px 0 rgba(255,255,255,.55)}}
+@keyframes shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:0 0 15px 0 rgba(255,255,255,.55)}}
 
 
 
@@ -26,9 +26,7 @@
 body{
     animation: fadeIn 2s;
     width: 100%;
-    background-color: black;
-    background-image: linear-gradient(225deg, #00282e 0, #032326 10%, #061d1e 20%, #051716 30%, #030e0d 40%, #000000 50%, #000000 60%, #000000 70%, #000000 80%, #000000 90%, #000000 100%);
-    width: 100%;
+    background-image: radial-gradient(circle at 56.16% -20.44%, #131d1c 0, #0c1311 25%, #000000 50%, #000000 75%, #000000 100%);;
 
         
 }
@@ -100,7 +98,7 @@ a{
 .red{
     width: 90%;
     align-items: center;
-    padding: 10px 10px;
+    padding: 30px 10px;
     margin: auto;
     
     @include navegador{
@@ -108,10 +106,11 @@ a{
         display: flex;
         width: 95%;
         border-radius: 20px;
+        margin-top: 50px;
     }   
 }
 .med{ 
-    background-color: rgb(14, 14, 14);
+    background-color: rgb(5, 5, 5);
     width: 100%;
     color: white;
     border-radius: 10px;
@@ -155,7 +154,7 @@ a{
     }
 }
 .med:hover{
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(10, 10, 10);
     animation: fadeIn .5s ease-in;
     animation:shadow-drop-center 0.1s linear both;
     transform: translateY(-10px);
@@ -171,69 +170,91 @@ a{
 
 
 .des{
-    margin-top: 30px;
+    @include navegador{
+                    margin-top: 70px;
+            }
 }
 .des1{
-    background-color: black;
     border-radius: 50px;
     width: 95%;
     border-radius: 2%;
     margin-top: 40px;
     margin-bottom: 40px;
     margin: auto;
+    @include navegador{
+                    margin-top: 40px;
+            }
 }
+
+
+
+
+
+
 .formulario{
+    background-color: rgb(2, 2, 2);
     width: 100%;
     height: auto;
     margin: auto;
-    margin-top: 40px;
-    display: flex;
-    @include navegador{
-        height: 550px;
-    } 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 30px;
     div{
         width: 100%;
-        
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+        padding: 10px;
     }
-    .forimg{
-            width: 0%;
-            @include navegador{
-            width: 100%;
-    }
+
+            .info{
+                width: 40%;
+                margin: auto 20px;
+            div{
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                p{
+                  padding: 0px 10px;  
+                }
+            }
         }
-    video{
-        margin: auto;
-        width: 100%;
-        height: 95%;
-        border-radius: 20px;
-        
- 
+
+    svg{
+        width: 25px;
+        height: 25px;
     }
+    @include navegador{
+        display: grid;
+        grid-row: 40%, 60%;
+
+        grid-template-areas: 
+        "info form"
+        ;
+    
+    }
+
+    
+
 }
 
-
 form{
-    background-color: rgb(3, 3, 3);
-    border: 2px solid white;
     width: 80%;
-    height: 345px;
     margin: auto;
     display:flex;
     flex-direction: column;
     padding: 10px;
-    border-radius: 20px; 
     margin-bottom: 15px;
+    text-align: center;
+
      @include navegador{
+        width: 100%;
+        align-content: center;
         margin: auto;
-        margin-left: 80px;
-        width: 95%;
-        height: 95%;
+        height: 100%;
     }   
 }
-form:hover{
-    background-color: rgb(10, 10, 10);
 
-}
 
 input, textarea{
     background-color:rgb(177, 177, 177);

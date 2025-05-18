@@ -1,8 +1,9 @@
-@mixin navegador{
-    @media (min-width: $media-dos){
+@mixin nav{
+    @media (min-width: $media-uno){
         @content        
     } 
 }
+
 header{
     
     width: 100%;
@@ -33,9 +34,9 @@ header{
                 
 
             }
-            // El contenedro del navegador  
+ 
             .hcss{
-                @include navegador{
+                @include nav{
                 display: flexbox;
                 justify-content: end;
 

@@ -1,4 +1,7 @@
 // Colores
+$fondo3:linear-gradient(240deg, #1a2f2e 0, #162523 16.67%, #101816 33.33%, #000000 50%, #000000 66.67%, #000000 83.33%, #000000 100%);
+
+$fondo2:rgb(0, 0, 0);
 $coloruno:black;
 $colordos:rgb(44, 36, 36);
 $colordos2:rgba(121, 57, 57, 0.1);
@@ -9,5 +12,5 @@ $colorseis:rgb(192, 192, 192);
 $colorsiete:rgb(34, 0, 34);
 $colordies:rgb(24, 0, 15);
 // Medidas de @Media
-$media-uno:1000px;
-$media-dos:992px;
+$media-uno:992px;
+$media-dos:950px;
